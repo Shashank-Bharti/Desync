@@ -135,7 +135,7 @@ export function DitherBackground({ config = DEFAULT_CONFIG }: Props) {
 
           if (dist < HOVER_RADIUS && dist > 0.5) {
             const t0 = smoothstep(0, HOVER_RADIUS, HOVER_RADIUS - dist);
-            const pullShape = t0 * (1 - t0 * 0.8);
+            const pullShape = t0 * (1 - t0 * 0.85);
             const maxPull = cellSize * 0.55;
             drawX = cx + (dvx / dist) * pullShape * maxPull;
             drawY = cy + (dvy / dist) * pullShape * maxPull;

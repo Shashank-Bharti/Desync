@@ -9,7 +9,7 @@ export function Header() {
         className="w-full lg:px-10 py-5 px-5 text-2xl bg-linear-to-b from-zinc-900 to-transparent  text-green-500 z-100 max-w-3xl fixed top-0 flex justify-between items-center "
     >
     
-    <span className="flex items-baseline  gap-2 tracking-tight">
+    <span className="flex items-baseline  gap-2 tracking-tighter">
        Desync
         <span className="text-xs tracking-tighter -translate-y-0.5 px-1 border-zinc-600 border bg-zinc-800">V 1.0.0</span>
     </span>
