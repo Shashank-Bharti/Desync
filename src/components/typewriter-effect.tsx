@@ -56,7 +56,7 @@ export function TypewriterEffect({texts,className }:TypewriterProps)  {
                 opacity: 1,
               }}
               transition={{
-                delay: i * LETTER_DELAY,
+                delay: i * LETTER_DELAY ,
                 duration: 0,
               }}
             >
@@ -83,7 +83,7 @@ export function TypewriterEffect({texts,className }:TypewriterProps)  {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 0] }}
               transition={{
-                delay: FADE_DELAY + (totalChars - 1 - i) * LETTER_DELAY,
+                delay: FADE_DELAY + (totalChars - i + 1) * LETTER_DELAY ,
                 times: [0, 0.1, 1],
                 duration: BOX_FADE_DURATION,
                 ease: "easeInOut",

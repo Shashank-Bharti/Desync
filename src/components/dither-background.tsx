@@ -14,8 +14,8 @@ export interface DitherConfig {
 }
 
 export const DEFAULT_CONFIG: DitherConfig = {
-  density: 0.7,
-  speed: 0.4,
+  density: 0.8,
+  speed: 0.6,
   symbolWeight: 0.18,
   cellSize: 20,
 };
@@ -82,7 +82,7 @@ export function DitherBackground({ config = DEFAULT_CONFIG }: Props) {
     }
 
     const SYM_LAST = SYMBOLS.length - 1;
-    const HOVER_RADIUS = 120;
+    const HOVER_RADIUS = 160;
 
     function draw() {
       if (!canvas || !ctx) return;
@@ -136,7 +136,7 @@ export function DitherBackground({ config = DEFAULT_CONFIG }: Props) {
           if (dist < HOVER_RADIUS && dist > 0.5) {
             const t0 = smoothstep(0, HOVER_RADIUS, HOVER_RADIUS - dist);
             const pullShape = t0 * (1 - t0 * 0.85);
-            const maxPull = cellSize * 0.55;
+            const maxPull = cellSize * 0.65;
             drawX = cx + (dvx / dist) * pullShape * maxPull;
             drawY = cy + (dvy / dist) * pullShape * maxPull;
           }
